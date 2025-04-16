@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+.carousel {
+    position: relative;
+    width: 94%;
+    height : 800px;
+    margin: auto;
+    overflow: hidden;
+}
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+.carousel img {
+    width: 100%;
+    display: block;
+}
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px; 
+    width: 50px;  
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%; /* Makes the arrows rounded */
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.carousel-control.prev {
+    left: 10px;
+}
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Lightens the background on hover */
+    color: black; /* Changes arrow color on hover */
+    transform: scale(1.1); /* Slightly enlarges the button on hover */
+}
+
+.product-list {
+    display: flex;
+    flex-direction: row; /* Ensures products are in a single row */
+    gap: 50px; /* Adds spacing between products */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px; /* Adjust width as needed */
+    height: 450px; /* Adjust height as needed */
+    margin: 10px;
+    border-radius: 15px; /* Rounds the corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    overflow: hidden; /* Ensures content stays within the rectangle */
+    padding: 20px;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Prevents items from shrinking */
+}
+
+.carousel-container { 
+    z-index: 1;
+}
+
